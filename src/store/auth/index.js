@@ -1,3 +1,5 @@
+import { merge } from "ramda";
+
 import {
   AUTH_REQUEST_LOGIN,
   AUTH_REQUEST_LOGIN_SUCCESS,
@@ -14,18 +16,18 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case AUTH_REQUEST_LOGIN: {
-      return Object.assign({}, state, { isLoading: true, error: undefined });
+      return merge(state, { isLoading: true, error: undefined });
     }
     case AUTH_REQUEST_LOGIN_SUCCESS: {
       const { user } = action.response;
-      return Object.assign({}, state, { isLoading: false, user });
+      return merge(state, { isLoading: false, user });
     }
     case AUTH_REQUEST_LOGIN_FAILURE: {
       const { error } = action.response;
-      return Object.assign({}, state, { isLoading: false, error });
+      return merge(state, { isLoading: false, error });
     }
     case AUTH_LOGOUT: {
-      return Object.assign({}, state, { user: undefined });
+      return merge(state, { user: undefined });
     }
     default: {
       return state;

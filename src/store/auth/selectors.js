@@ -1,8 +1,4 @@
-export function isAuthenticated(state) {
-  return state.auth.user !== undefined;
-}
+import { is, path, pathSatisfies } from "ramda";
 
-export function currentUserEmail(state) {
-  const { user } = state.auth;
-  return user ? user.email : undefined;
-}
+export const isAuthenticated = pathSatisfies(is(Object), ["auth", "user"]);
+export const currentUserEmail = path(["auth", "user", "email"]);
