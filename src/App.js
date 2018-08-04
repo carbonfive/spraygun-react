@@ -1,27 +1,27 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.scss";
-import Counter from "./components/Counter";
+import ToggleSwitch from "./components/ToggleSwitch";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOn: false };
+  }
+
+  handleToggle = () => {
+    this.setState(state => ({ ...state, isOn: !state.isOn }));
+  };
+
   render() {
+    const { isOn } = this.state;
+
     return (
       <div className="App">
         <header className="App__header">
-          <Counter />
-          <img src={logo} className="App__logo" alt="logo" />
-          <p>
-            Edit <code className="App__code">src/App.js</code> and save to
-            reload.
-          </p>
-          <a
-            className="App__link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p className="App__intro">Give it a spin!</p>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <ToggleSwitch isOn={isOn} onClick={this.handleToggle} />
+          </div>
         </header>
       </div>
     );

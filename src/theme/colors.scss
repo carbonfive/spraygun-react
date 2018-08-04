@@ -1,7 +1,9 @@
-$blue: #61dafb;
-$blue-darker: darken($blue, 30%);
-$blue-lighter: lighten($blue, 5%);
+:root {
+  --blue: #61dafb;
+  --green: #2ecc40;
 
-$white: #fff;
-$gray-28: #282c34;
-$black: #111;
+  --white: #fff;
+  --gray-28: #282c34;
+  --gray-dd: #ddd;
+  --black: #111;
+}
