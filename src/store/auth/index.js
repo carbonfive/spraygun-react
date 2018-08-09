@@ -1,8 +1,8 @@
 import {
-  AUTH_REQUEST_LOGIN,
-  AUTH_REQUEST_LOGIN_SUCCESS,
-  AUTH_REQUEST_LOGIN_FAILURE,
-  AUTH_LOGOUT
+  REQUEST_LOGIN,
+  REQUEST_LOGIN_SUCCESS,
+  REQUEST_LOGIN_FAILURE,
+  LOGOUT
 } from "./actions";
 
 const initialState = {
@@ -13,18 +13,18 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case AUTH_REQUEST_LOGIN: {
+    case REQUEST_LOGIN: {
       return { ...state, isLoading: true, error: undefined };
     }
-    case AUTH_REQUEST_LOGIN_SUCCESS: {
+    case REQUEST_LOGIN_SUCCESS: {
       const { user } = action.response;
       return { ...state, isLoading: false, user };
     }
-    case AUTH_REQUEST_LOGIN_FAILURE: {
+    case REQUEST_LOGIN_FAILURE: {
       const { error } = action.response;
       return { ...state, isLoading: false, error };
     }
-    case AUTH_LOGOUT: {
+    case LOGOUT: {
       return { ...state, user: undefined };
     }
     default: {

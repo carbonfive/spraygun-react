@@ -1,8 +1,8 @@
-export const AUTH_REQUEST_LOGIN = "AUTH_REQUEST_LOGIN";
-export const AUTH_REQUEST_LOGIN_SUCCESS = "AUTH_REQUEST_LOGIN_SUCCESS";
-export const AUTH_REQUEST_LOGIN_FAILURE = "AUTH_REQUEST_LOGIN_FAILURE";
+export const REQUEST_LOGIN = "auth/REQUEST_LOGIN";
+export const REQUEST_LOGIN_SUCCESS = "auth/REQUEST_LOGIN_SUCCESS";
+export const REQUEST_LOGIN_FAILURE = "auth/REQUEST_LOGIN_FAILURE";
 
-export const AUTH_LOGOUT = "AUTH_LOGOUT";
+export const LOGOUT = "auth/LOGOUT";
 
 export function login({ email }) {
   return async dispatch => {
@@ -13,17 +13,17 @@ export function login({ email }) {
 }
 
 export function logout() {
-  return { type: AUTH_LOGOUT };
+  return { type: LOGOUT };
 }
 
 function loginRequested() {
-  return { type: AUTH_REQUEST_LOGIN };
+  return { type: REQUEST_LOGIN };
 }
 
 function loginSucceeded(response) {
-  return { type: AUTH_REQUEST_LOGIN_SUCCESS, response };
+  return { type: REQUEST_LOGIN_SUCCESS, response };
 }
 
 // function loginFailed(response) {
-//   return { type: AUTH_REQUEST_LOGIN_FAILURE, response };
+//   return { type: REQUEST_LOGIN_FAILURE, response };
 // }

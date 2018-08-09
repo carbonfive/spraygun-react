@@ -1,8 +1,8 @@
 import {
-  AUTH_REQUEST_LOGIN,
-  AUTH_REQUEST_LOGIN_SUCCESS,
-  AUTH_REQUEST_LOGIN_FAILURE,
-  AUTH_LOGOUT
+  REQUEST_LOGIN,
+  REQUEST_LOGIN_SUCCESS,
+  REQUEST_LOGIN_FAILURE,
+  LOGOUT
 } from "./actions";
 
 import reducer from ".";
@@ -13,25 +13,25 @@ function subject(action) {
   return reducer(state, action);
 }
 
-describe("AUTH_REQUEST_LOGIN", () => {
+describe("REQUEST_LOGIN", () => {
   beforeEach(() => {
     state = {};
   });
 
   it("sets isLoading: true", () => {
-    expect(subject({ type: AUTH_REQUEST_LOGIN })).toMatchObject({
+    expect(subject({ type: REQUEST_LOGIN })).toMatchObject({
       isLoading: true
     });
   });
 
   it("sets error: undefined", () => {
-    expect(subject({ type: AUTH_REQUEST_LOGIN })).toMatchObject({
+    expect(subject({ type: REQUEST_LOGIN })).toMatchObject({
       error: undefined
     });
   });
 });
 
-describe("AUTH_REQUEST_LOGIN_SUCCESS", () => {
+describe("REQUEST_LOGIN_SUCCESS", () => {
   const user = { email: "user@example.com" };
   const response = { user };
 
@@ -40,23 +40,19 @@ describe("AUTH_REQUEST_LOGIN_SUCCESS", () => {
   });
 
   it("sets isLoading: false", () => {
-    expect(
-      subject({ type: AUTH_REQUEST_LOGIN_SUCCESS, response })
-    ).toMatchObject({
+    expect(subject({ type: REQUEST_LOGIN_SUCCESS, response })).toMatchObject({
       isLoading: false
     });
   });
 
   it("sets user from response", () => {
-    expect(
-      subject({ type: AUTH_REQUEST_LOGIN_SUCCESS, response })
-    ).toMatchObject({
+    expect(subject({ type: REQUEST_LOGIN_SUCCESS, response })).toMatchObject({
       user
     });
   });
 });
 
-describe("AUTH_REQUEST_LOGIN_FAILURE", () => {
+describe("REQUEST_LOGIN_FAILURE", () => {
   const error = "Something went wrong.";
   const response = { error };
 
@@ -65,29 +61,25 @@ describe("AUTH_REQUEST_LOGIN_FAILURE", () => {
   });
 
   it("sets isLoading: false", () => {
-    expect(
-      subject({ type: AUTH_REQUEST_LOGIN_FAILURE, response })
-    ).toMatchObject({
+    expect(subject({ type: REQUEST_LOGIN_FAILURE, response })).toMatchObject({
       isLoading: false
     });
   });
 
   it("sets error from response", () => {
-    expect(
-      subject({ type: AUTH_REQUEST_LOGIN_FAILURE, response })
-    ).toMatchObject({
+    expect(subject({ type: REQUEST_LOGIN_FAILURE, response })).toMatchObject({
       error
     });
   });
 });
 
-describe("AUTH_LOGOUT", () => {
+describe("LOGOUT", () => {
   beforeEach(() => {
     state = { user: { email: "user@example.com" } };
   });
 
   it("sets user: undefined", () => {
-    expect(subject({ type: AUTH_LOGOUT })).toMatchObject({
+    expect(subject({ type: LOGOUT })).toMatchObject({
       user: undefined
     });
   });
