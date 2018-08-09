@@ -1,5 +1,4 @@
 import React from "react";
-import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login, logout } from "./store/auth/actions";
@@ -33,8 +32,7 @@ const mapStateToProps = state => ({
   email: currentUserEmail(state)
 });
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ login, logout }, dispatch);
+const mapDispatchToProps = { login, logout };
 
 export default connect(
   mapStateToProps,
