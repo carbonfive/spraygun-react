@@ -1,18 +1,14 @@
-import { applyMiddleware, combineReducers, compose, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
 import config from "../config";
 import middleware from "./middleware";
-import auth from "./auth";
-
-const reducers = {
-  auth
-};
+import reducer from "./reducers";
 
 const composeEnhancers = config.redux.enableDevTools
   ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
   : compose;
 
 export default createStore(
-  combineReducers(reducers),
+  reducer,
   {},
   composeEnhancers(applyMiddleware(...middleware))
 );

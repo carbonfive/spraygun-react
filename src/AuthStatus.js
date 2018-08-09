@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { login, logout } from "./store/auth/actions";
-import { currentUserEmail, isAuthenticated } from "./store/auth/selectors";
+import { login, logout } from "./store/actions/auth";
+import { currentUserEmail, isAuthenticated } from "./store/selectors";
 
 export function AuthStatus({ isAuthenticated, email, login, logout }) {
   return (

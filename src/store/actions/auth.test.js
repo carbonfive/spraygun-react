@@ -1,6 +1,6 @@
 import mockStore from "../mock";
 
-import { REQUEST_LOGIN, REQUEST_LOGIN_SUCCESS, login } from "./actions";
+import { REQUEST_LOGIN, REQUEST_LOGIN_SUCCESS, login } from "./auth";
 
 let store;
 
