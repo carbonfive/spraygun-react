@@ -1,4 +1,4 @@
-import config from "../config";
+import config from "config";
 import thunk from "redux-thunk";
 
 const middleware = [thunk];

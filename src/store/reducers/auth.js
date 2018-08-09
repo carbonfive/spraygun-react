@@ -3,7 +3,7 @@ import {
   REQUEST_LOGIN_SUCCESS,
   REQUEST_LOGIN_FAILURE,
   LOGOUT
-} from "../actions/auth";
+} from "store/actions/auth";
 
 const initialState = {
   error: undefined,
