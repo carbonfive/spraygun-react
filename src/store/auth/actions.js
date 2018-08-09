@@ -12,18 +12,18 @@ export function login({ email }) {
   };
 }
 
-export function loginRequested() {
-  return { type: AUTH_REQUEST_LOGIN };
-}
-
-export function loginSucceeded(response) {
-  return { type: AUTH_REQUEST_LOGIN_SUCCESS, response };
-}
-
-export function loginFailed(response) {
-  return { type: AUTH_REQUEST_LOGIN_FAILURE, response };
-}
-
 export function logout() {
   return { type: AUTH_LOGOUT };
 }
+
+function loginRequested() {
+  return { type: AUTH_REQUEST_LOGIN };
+}
+
+function loginSucceeded(response) {
+  return { type: AUTH_REQUEST_LOGIN_SUCCESS, response };
+}
+
+// function loginFailed(response) {
+//   return { type: AUTH_REQUEST_LOGIN_FAILURE, response };
+// }
