@@ -1,4 +1,5 @@
-$gray-22: #222;
+$blue: #61dafb;
+$gray-28: #282c34;
 $white: white;
 
 .App {
@@ -6,22 +7,22 @@ $white: white;
 
   &__logo {
     animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+    height: 40vmin;
   }
 
   &__header {
-    background-color: $gray-22;
-    height: 150px;
-    padding: 20px;
+    background-color: $gray-28;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
     color: $white;
   }
 
-  &__title {
-    font-size: 1.5em;
-  }
-
-  &__intro {
-    font-size: large;
+  &__link {
+    color: $blue;
   }
 }
 

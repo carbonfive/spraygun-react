@@ -11,13 +11,13 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ arch }}-{{ checksum "yarn.lock" }}
-          - v1-dependencies-{{ arch }}-
+            - v1-dependencies-{{ arch }}-{{ checksum "yarn.lock" }}
+            - v1-dependencies-{{ arch }}-
 
       - run:
           name: npm install yarn
           command: |
-            YARN_VERSION=1.9.4
+            YARN_VERSION=1.10.1
             if [[ $(yarn --version) != $YARN_VERSION ]]; then
               sudo npm install -g yarn@$YARN_VERSION;
               sudo chmod a+x /usr/local/bin/yarn
