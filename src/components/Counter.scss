@@ -1,0 +1,31 @@
+$blue: #61dafb;
+$blue-darker: darken($blue, 30%);
+$blue-lighter: lighten($blue, 5%);
+$white: white;
+
+.Counter {
+  &__button {
+    align-items: center;
+    background-color: $blue;
+    border: none;
+    border-bottom: 2px solid $blue-darker;
+    border-radius: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin: 20px auto;
+    width: 100px;
+  }
+
+  &__button:hover {
+    background-color: $blue-lighter;
+  }
+
+  &__button:active {
+    background-color: $white;
+  }
+}
