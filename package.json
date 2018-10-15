@@ -20,6 +20,7 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
     "serve": "^9.4.0",
+    "shelljs": "^0.8.2",
     "stylelint": "^9.4.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
@@ -27,6 +28,7 @@
     "stylelint-scss": "^3.2.0"
   },
   "scripts": {
+    "prestart": "node bin/pre-start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "npm-run-all -c lint:*",
