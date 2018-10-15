@@ -1,10 +1,12 @@
-$blue: #61dafb;
-$blue-darker: darken($blue, 30%);
-$blue-lighter: lighten($blue, 5%);
-$white: white;
+@import "../theme/colors.scss";
+@import "../theme/typography.scss";
 
 .Counter {
+  @include body-text;
+
   &__button {
+    @include body-text;
+
     align-items: center;
     background-color: $blue;
     border: none;
@@ -12,20 +14,18 @@ $white: white;
     border-radius: 15px;
     box-sizing: border-box;
     cursor: pointer;
-    font-weight: bold;
-    font-size: large;
     display: flex;
     justify-content: center;
     height: 30px;
     margin: 20px auto;
     width: 100px;
-  }
 
-  &__button:hover {
-    background-color: $blue-lighter;
-  }
+    &:hover {
+      background-color: $blue-lighter;
+    }
 
-  &__button:active {
-    background-color: $white;
+    &:active {
+      background-color: $white;
+    }
   }
 }

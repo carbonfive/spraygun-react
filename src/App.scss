@@ -1,6 +1,5 @@
-$blue: #61dafb;
-$gray-28: #282c34;
-$white: white;
+@import "./theme/colors.scss";
+@import "./theme/typography.scss";
 
 .App {
   text-align: center;
@@ -12,14 +11,19 @@ $white: white;
   }
 
   &__header {
+    @include headline-text;
+
     background-color: $gray-28;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
     color: $white;
+  }
+
+  &__code {
+    font-family: $font-monospace;
   }
 
   &__link {
