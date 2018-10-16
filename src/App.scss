@@ -3,32 +3,32 @@
 
 .App {
   text-align: center;
+}
 
-  &__logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
-    pointer-events: none;
-  }
+.App__logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
 
-  &__header {
-    @include headline-text;
+.App__header {
+  @include headline-text;
 
-    background-color: $gray-28;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $white;
-  }
+  background-color: $gray-28;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+}
 
-  &__code {
-    font-family: $font-monospace;
-  }
+.App__code {
+  font-family: $font-monospace;
+}
 
-  &__link {
-    color: $blue;
-  }
+.App__link {
+  color: $blue;
 }
 
 @keyframes App-logo-spin {
