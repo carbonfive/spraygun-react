@@ -1,31 +1,31 @@
-$blue: #61dafb;
-$blue-darker: darken($blue, 30%);
-$blue-lighter: lighten($blue, 5%);
-$white: white;
+@import "../theme/colors.scss";
+@import "../theme/typography.scss";
 
 .Counter {
-  &__button {
-    align-items: center;
-    background-color: $blue;
-    border: none;
-    border-bottom: 2px solid $blue-darker;
-    border-radius: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: large;
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    margin: 20px auto;
-    width: 100px;
-  }
+  @include body-text;
+}
 
-  &__button:hover {
+.Counter__button {
+  @include body-text;
+
+  align-items: center;
+  background-color: $blue;
+  border: none;
+  border-bottom: 2px solid $blue-darker;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  margin: 20px auto;
+  width: 100px;
+
+  &:hover {
     background-color: $blue-lighter;
   }
 
-  &__button:active {
+  &:active {
     background-color: $white;
   }
 }

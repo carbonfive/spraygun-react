@@ -1,11 +1,6 @@
 {
-  "plugins": [
-    "stylelint-declaration-use-variable"
-  ],
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-recommended-scss"
-  ],
+  "plugins": ["stylelint-declaration-use-variable"],
+  "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
   "rules": {
     "declaration-empty-line-before": null,
     "declaration-colon-newline-after": null,
@@ -22,8 +17,23 @@
         "resolveNestedSelectors": true
       }
     ],
+    "selector-max-compound-selectors": 1,
     "selector-max-id": 0,
-    "sh-waqar/declaration-use-variable": "/color/",
+    "selector-no-qualifying-type": true,
+    "sh-waqar/declaration-use-variable": [
+      [
+        "/color/",
+        {
+          "ignoreValues": [
+            "currentcolor",
+            "inherit",
+            "initial",
+            "transparent",
+            "unset"
+          ]
+        }
+      ]
+    ],
     "string-quotes": "double",
     "value-list-comma-newline-after": null
   }
