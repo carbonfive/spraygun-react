@@ -34,7 +34,7 @@ This is a React 16 app.
 
 ## Prerequisites
 
-- Node 10.13.0
+- Node 10.15.0
 - Yarn 1.12.1 or higher
 
 ## Quick start

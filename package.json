@@ -7,18 +7,18 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-prettier": "^3.0.0",
-    "husky": "^0.14.3",
+    "husky": "^1.3.1",
     "jest-enzyme": "^7.0.0",
     "jest-junit": "^5.1.0",
-    "lint-staged": "^7.2.0",
+    "lint-staged": "^8.1.0",
     "node-sass-chokidar": "^1.3.3",
     "npm-run-all": "^4.1.3",
-    "prettier": "1.14.3",
+    "prettier": "1.15.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4",
+    "react-scripts": "2.1.3",
     "serve": "^10.0.2",
     "shelljs": "^0.8.2",
     "stylelint": "^9.4.0",
@@ -37,7 +37,6 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "heroku-postbuild": "npm-run-all build"
   },
   "lint-staged": {
@@ -45,7 +44,7 @@
     "src/**/*.scss": "stylelint"
   },
   "engines": {
-    "node": "10.13.0",
+    "node": "10.15.0",
     "yarn": ">=1.12.1"
   },
   "jest": {
@@ -59,5 +58,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
