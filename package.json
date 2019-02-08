@@ -5,7 +5,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-prettier": "^3.0.0",
