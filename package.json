@@ -19,7 +19,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.1.3",
-    "serve": "^10.0.2",
+    "serve": "^10.1.2",
     "shelljs": "^0.8.2",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended-scss": "^3.2.0",
