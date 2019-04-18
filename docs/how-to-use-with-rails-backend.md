@@ -161,3 +161,31 @@ $ git add .
 $ git commit -m "Add React frontend with spraygun-react"
 $ git push heroku master
 ```
+
+### 9. Debugging Rails
+
+The current stack suppresses the output from the Rails server, which interferes with debugging the back-end.
+
+There's probably a few ways to get around this and here's two of them.
+
+The first is if you just want passive logging, you can just run this command in a different console window:
+
+```
+tail -f log/development.log
+```
+
+And use `logger.info` instead of `puts` for output.
+
+If you need an actual debugger, start the rails app and the client app separately.
+
+Run the Rails server:
+
+```
+rails s
+```
+
+Open a new console and start the client app:
+```
+cd client
+yarn start
+```
