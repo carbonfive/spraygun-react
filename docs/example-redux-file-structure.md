@@ -1,4 +1,10 @@
-# Redux domain
+# Example redux file structure
+
+If you'd like to use spraygun-react with Redux, here are potential file structures:
+
+## Redux domain
+
+```
 src/
   domains/
     auth/
@@ -17,8 +23,11 @@ src/
     ├── configureStore.js
   ├── api.js
   ├── App.jsx
+```
 
-# Redux ducks
+## Redux ducks
+
+```
 src/
   domains/
     auth/
@@ -36,8 +45,11 @@ src/
     ├── configureStore.js
   ├── api.js
   ├── App.jsx
+```
 
-# Redux domain.ts
+## Redux domain.ts
+
+```
 src/
   domains/
     auth/
@@ -58,3 +70,4 @@ src/
     ├── types.ts
   ├── api.ts
   ├── App.tsx
+```
