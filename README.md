@@ -22,6 +22,10 @@ If you'd like to use spraygun-react with a Rails API backend, follow this guide:
 
 > [Using spraygun-react with a Rails backend](./docs/how-to-use-with-rails-backend.md)
 
+If you'd like to use spraygun-react with Redux, here are potential file structures:
+
+> [Redux file structures](./docs/example-redux-file-structure.md)
+
 _Below this line is the README that will accompany your generated project._
 
 ---
