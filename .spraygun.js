@@ -44,7 +44,7 @@ exports.setup = (projectDirectory, { chalk, shell }) => {
   shell.exec("yarn install");
   shell.rm("-rf", ".spraygun.js");
   shell.rm("-rf", "LICENSE");
-  shell.rm("-rf", "docs/how-to-use-with-rails-backend.md");
+  shell.rm("-rf", "docs/*");
   shell.exec("git add -A .");
   shell.exec("git commit -n -q -m 'Init from spraygun template'");
 
