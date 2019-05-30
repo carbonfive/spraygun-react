@@ -25,7 +25,7 @@
     "stylelint-config-recommended-scss": "^3.3.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-declaration-use-variable": "^1.6.1",
-    "stylelint-scss": "^3.6.1"
+    "stylelint-scss": "^3.7.0"
   },
   "scripts": {
     "prestart": "node bin/pre-start",
