@@ -28,7 +28,8 @@ exports.setup = (projectDirectory, { chalk, shell }) => {
       ".circleci/config.yml"
     ],
     [/Yarn \d+\.\d+\.\d+/gi, `Yarn ${yarnVersion}`, "README.md"],
-    [/<title>.*?<\/title>/, `<title>${appName}</title>`, "public/index.html"]
+    [/<title>.*?<\/title>/, `<title>${appName}</title>`, "public/index.html"],
+    [/^yarn.lock$/, "", ".gitignore"]
   ];
 
   shell.cd(projectDirectory);
