@@ -12,7 +12,7 @@ This is a Carbon Five-flavored convenience skeleton project for React. It is bas
 - Deployable to Heroku out of the box
 - Or deploy via docker using the included Dockerfile
 
-To get started, make sure you have Node 8.10+ and Yarn installed, and then generate your project like this:
+To get started, make sure you have Node 10+ and Yarn installed, and then generate your project like this:
 
 ```
 $ npx spraygun -t react <project-directory>
