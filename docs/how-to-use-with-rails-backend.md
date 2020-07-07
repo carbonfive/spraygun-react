@@ -159,7 +159,7 @@ Deploy your app as usual. Don't forget to commit your changes first.
 ```
 $ git add .
 $ git commit -m "Add React frontend with spraygun-react"
-$ git push heroku master
+$ git push heroku main
 ```
 
 ### 9. Debugging Rails
@@ -185,6 +185,7 @@ rails s
 ```
 
 Open a new console and start the client app:
+
 ```
 cd client
 yarn start

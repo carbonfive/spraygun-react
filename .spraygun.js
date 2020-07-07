@@ -25,15 +25,15 @@ exports.setup = (projectDirectory, { chalk, shell }) => {
     [
       /YARN_VERSION=\d+\.\d+\.\d+/,
       `YARN_VERSION=${yarnVersion}`,
-      ".circleci/config.yml"
+      ".circleci/config.yml",
     ],
     [/Yarn \d+\.\d+\.\d+/gi, `Yarn ${yarnVersion}`, "README.md"],
     [/<title>.*?<\/title>/, `<title>${appName}</title>`, "public/index.html"],
-    [/^yarn.lock$/, "", ".gitignore"]
+    [/^yarn.lock$/, "", ".gitignore"],
   ];
 
   shell.cd(projectDirectory);
-  replacements.forEach(r => shell.sed("-i", ...r));
+  replacements.forEach((r) => shell.sed("-i", ...r));
   removeBanner();
   shell.rm("-rf", "node_modules");
   shell.rm("-rf", ".git");
@@ -41,6 +41,7 @@ exports.setup = (projectDirectory, { chalk, shell }) => {
   const isChildOfExistingRepo = fs.existsSync("../.git");
   if (!isChildOfExistingRepo) {
     shell.exec("git init -q");
+    shell.exec("git checkout -q -b main");
   }
   shell.exec("yarn install");
   shell.rm("-rf", ".spraygun.js");
@@ -76,7 +77,7 @@ exports.setup = (projectDirectory, { chalk, shell }) => {
     {cyan yarn start}
 
   If you plan on integrating React with a {yellow Rails} backend, check out these docs:
-  {cyan https://github.com/carbonfive/spraygun-react/blob/master/docs}
+  {cyan https://github.com/carbonfive/spraygun-react/blob/main/docs}
 
   Enjoy your Carbon Five flavored React application!
 `
