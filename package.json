@@ -33,7 +33,7 @@
     "build": "react-scripts build",
     "lint": "npm-run-all -c lint:*",
     "lint:eslint": "eslint 'src/**/*.{js,jsx}'",
-    "lint:stylelint": "stylelint src/**/*.scss",
+    "lint:stylelint": "stylelint 'src/**/*.scss'",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
