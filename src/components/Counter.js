@@ -8,7 +8,7 @@ export default class Counter extends React.Component {
   }
 
   increment = () => {
-    this.setState(state => ({ ...state, count: state.count + 1 }));
+    this.setState((state) => ({ ...state, count: state.count + 1 }));
   };
 
   render() {
