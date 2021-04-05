@@ -28,6 +28,7 @@
     "stylelint-scss": "^3.8.0"
   },
   "scripts": {
+    "prepare": "husky install",
     "prestart": "node bin/pre-start",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -65,10 +66,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
