@@ -1,5 +1,5 @@
-@import "./theme/colors.scss";
-@import "./theme/typography.scss";
+@use "./theme/colors.scss";
+@use "./theme/typography.scss";
 
 .App {
   text-align: center;
@@ -15,23 +15,23 @@
 }
 
 .App__header {
-  @include headline-text;
+  @include typography.headline-text;
 
-  background-color: $gray-28;
+  background-color: colors.$gray-28;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $white;
+  color: colors.$white;
 }
 
 .App__code {
-  font-family: $font-monospace;
+  font-family: typography.$font-monospace;
 }
 
 .App__link {
-  color: $blue;
+  color: colors.$blue;
 }
 
 @keyframes App-logo-spin {

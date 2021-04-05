@@ -50,6 +50,7 @@ module.exports = {
         "/color/",
         {
           ignoreValues: [
+            "/\\w+\\.\\$.+/",
             "currentcolor",
             "inherit",
             "initial",
