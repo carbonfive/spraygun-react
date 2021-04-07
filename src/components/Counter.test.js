@@ -1,24 +1,23 @@
-import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Counter from "./Counter";
 
-function subject() {
-  return shallow(<Counter />);
-}
+beforeEach(() => {
+  render(<Counter />);
+});
 
 describe("initial state", () => {
   it("renders 0", () => {
-    expect(subject()).toIncludeText("0");
+    expect(screen.getByText("0")).toBeInTheDocument();
   });
 });
 
 describe("onClick", () => {
-  it("increments when clicked", () => {
-    const component = subject();
-    component.find("button").simulate("click");
-    expect(component).toIncludeText("1");
+  it("increments when clicked", async () => {
+    await userEvent.click(screen.getByRole("button"));
+    expect(screen.getByText("1")).toBeInTheDocument();
 
-    component.find("button").simulate("click");
-    expect(component).toIncludeText("2");
+    await userEvent.click(screen.getByRole("button"));
+    expect(screen.getByText("2")).toBeInTheDocument();
   });
 });

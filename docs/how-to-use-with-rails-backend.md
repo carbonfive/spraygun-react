@@ -85,7 +85,7 @@ Create a `package.json` at the root of the Rails project with these contents:
     "npm-run-all": "^4.1.3"
   },
   "engines": {
-    "node": "10.15.0",
+    "node": "^14.16.0",
     "yarn": ">=1.12.1"
   },
   "cacheDirectories": ["node_modules", "client/node_modules"]

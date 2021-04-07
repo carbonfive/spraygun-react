@@ -1,17 +1,17 @@
-@import "../theme/colors.scss";
-@import "../theme/typography.scss";
+@use "theme/colors.scss";
+@use "theme/typography.scss";
 
 .Counter {
-  @include body-text;
+  @include typography.body-text;
 }
 
 .Counter__button {
-  @include body-text;
+  @include typography.body-text;
 
   align-items: center;
-  background-color: $blue;
+  background-color: colors.$blue;
   border: none;
-  border-bottom: 2px solid $blue-darker;
+  border-bottom: 2px solid colors.$blue-darker;
   border-radius: 15px;
   box-sizing: border-box;
   cursor: pointer;
@@ -22,10 +22,10 @@
   width: 100px;
 
   &:hover {
-    background-color: $blue-lighter;
+    background-color: colors.$blue-lighter;
   }
 
   &:active {
-    background-color: $white;
+    background-color: colors.$white;
   }
 }
