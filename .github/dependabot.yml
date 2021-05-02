@@ -8,3 +8,4 @@ updates:
       time: "14:00"
       timezone: America/Los_Angeles
     open-pull-requests-limit: 10
+    versioning-strategy: increase-if-necessary
