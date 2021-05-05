@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ["jest", "prettier"],
+  plugins: ["jest", "prettier", "testing-library"],
   rules: {
     "no-unused-vars": [
       "error",
@@ -16,6 +16,7 @@ module.exports = {
     "react-app",
     "eslint:recommended",
     "plugin:jest/recommended",
+    "plugin:testing-library/react",
     "prettier",
   ],
 };
