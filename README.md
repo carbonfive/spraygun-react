@@ -1,3 +1,9 @@
+:warning: **This repo has been archived and is not being maintained.** :warning:
+
+Please use the TypeScript version instead: [spraygun-react-ts](https://github.com/carbonfive/spraygun-react-ts).
+
+---
+
 # spraygun-react
 
 [![CircleCI](https://circleci.com/gh/carbonfive/spraygun-react/tree/main.svg?style=shield)](https://circleci.com/gh/carbonfive/spraygun-react/tree/main)
